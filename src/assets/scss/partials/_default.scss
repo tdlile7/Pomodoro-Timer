@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css?family=Oswald&display=swap");
+
+// Global Styles
+$primary-color: #dc3545;
+$light-color: #f4f4f4;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Oswald", sans-serif;
+}
+
+body {
+  font-size: 1rem;
+  line-height: 1.6;
+  background-color: #fff;
+  color: #333;
+}
+
+// ---------Default Styles---------
+
+// a tags
+a {
+  color: $primary-color;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #666;
+}
+
+// Flex Box
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+//Grids
+$grid-sizes: [1, 2, 3, 4];
+
+@each $grid-size in $grid-sizes {
+  .grid-#{$grid-size} {
+    display: grid;
+    grid-template-columns: repeat($grid-size, 1fr);
+    grid-gap: 1rem;
+  }
+}
+
+// Buttons
+.btn {
+  display: inline-block;
+  background: $light-color;
+  color: #333;
+  padding: 0.4rem 1.3rem;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  transition: opacity 0.2s ease-in;
+  outline: none;
+}
+
+.btn:hover {
+  opacity: 0.85;
+}

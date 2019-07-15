@@ -1,0 +1,101 @@
+#home {
+  grid-template-rows: 80% 20%;
+  grid-gap: 0;
+
+  .timers {
+    position: relative;
+    .timer {
+      &__name {
+        text-align: center;
+        font-size: 2rem;
+      }
+
+      &__display {
+        font-size: 3rem;
+      }
+    }
+  }
+
+  .options {
+    position: relative;
+
+    &__sound {
+      position: absolute;
+      width: 12.5%;
+      bottom: 20%;
+      left: 5%;
+
+      h3 {
+        font-size: 2rem;
+      }
+
+      input[type="checkbox"] {
+        position: relative;
+        display: block;
+        margin: 0 1rem;
+        transform: scale(2);
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  html {
+    font-size: 12px;
+  }
+
+  #home {
+    .timers {
+      overflow-y: auto;
+
+      .timer {
+        grid-template-columns: 1fr;
+        grid-row-gap: 2rem;
+        padding-bottom: 2rem;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.7);
+
+        &__name {
+          text-align: center;
+          font-size: 3rem;
+        }
+
+        &__display {
+          font-size: 4rem;
+        }
+
+        &__buttons {
+          button {
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+
+    .options {
+      flex: row;
+      > a {
+        position: relative;
+        bottom: 2rem;
+
+        button {
+          font-size: 2rem;
+        }
+      }
+
+      &__sound {
+        width: 100%;
+        left: 0;
+        bottom: 10%;
+
+        h3 {
+          font-size: 2rem;
+        }
+
+        input[type="checkbox"] {
+          display: block;
+          transform: scale(1.5);
+        }
+      }
+    }
+  }
+}

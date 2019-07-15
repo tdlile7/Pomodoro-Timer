@@ -1,0 +1,25 @@
+#clock {
+  grid-template-rows: 70% 20%;
+  grid-gap: 0;
+
+  .display__name {
+    font-size: 5rem;
+    text-align: center;
+  }
+
+  .display__time {
+    font-size: 7rem;
+  }
+
+  .options__btn {
+    font-size: 2rem;
+  }
+
+  .txt-countdown {
+    color: rgb(137, 245, 209);
+  }
+}
+
+.pomodoro {
+  background: rgb(255, 93, 93);
+}
