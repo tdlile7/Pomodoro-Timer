@@ -40,7 +40,7 @@ const Clock = () => {
     let id;
 
     // If the timer is neither zero or paused, the timer will continue to countdown
-    if (counter.minutes !== 0 || (counter.seconds !== 0 && !pause)) {
+    if ((counter.minutes !== 0 || counter.seconds !== 0) && !pause) {
       // Plays beep audio during the last five seconds of timer countdown
       if (playSound && counter.minutes === 0 && counter.seconds < 6) {
         beepRef.current.play();
